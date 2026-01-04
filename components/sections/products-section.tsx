@@ -61,9 +61,12 @@ export function ProductsSection() {
                                             className="rounded-2xl"
                                         />
                                     </div>
-                                    <h3 className="mb-3 text-3xl font-bold text-white">
+                                    <h3 className="mb-1 text-3xl font-bold text-white">
                                         Promptify
                                     </h3>
+                                    <p className="mb-3 text-sm text-purple-400/80">
+                                        Promptify by CodexAI
+                                    </p>
                                     <span className="mb-4 inline-block rounded-full bg-green-500/20 px-4 py-1 text-sm font-medium text-green-400">
                                         Live Now
                                     </span>
@@ -126,9 +129,12 @@ export function ProductsSection() {
                                             className="rounded-2xl"
                                         />
                                     </div>
-                                    <h3 className="mb-3 text-3xl font-bold text-white">
+                                    <h3 className="mb-1 text-3xl font-bold text-white">
                                         Deenify
                                     </h3>
+                                    <p className="mb-3 text-sm text-yellow-400/80">
+                                        Deenify by CodexAI
+                                    </p>
                                     <span className="mb-4 inline-block rounded-full bg-yellow-500/20 px-4 py-1 text-sm font-medium text-yellow-400">
                                         Under Construction
                                     </span>
@@ -147,12 +153,54 @@ export function ProductsSection() {
                         </GlowingShadow>
                     </motion.div>
 
-                    {/* Card 3: AI Lab */}
+                    {/* Card 3: Edify */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                        <GlowingShadow glowColor="#3B82F6">
+                            <div className="flex h-full flex-col items-center justify-between p-8 text-center">
+                                <div className="flex flex-col items-center">
+                                    <div className="mb-6">
+                                        <Image
+                                            src="/edify-logo.png"
+                                            alt="Edify Logo"
+                                            width={100}
+                                            height={100}
+                                            className="rounded-2xl"
+                                        />
+                                    </div>
+                                    <h3 className="mb-1 text-3xl font-bold text-white">
+                                        Edify: Learn AI by Building
+                                    </h3>
+                                    <p className="mb-3 text-sm text-blue-400/80">
+                                        Edify by CodexAI
+                                    </p>
+                                    <span className="mb-4 inline-block rounded-full bg-blue-500/20 px-4 py-1 text-sm font-medium text-blue-400">
+                                        Updating
+                                    </span>
+                                    <p className="mb-8 text-gray-400">
+                                        Practical learning for real builders.
+                                    </p>
+                                </div>
+                                <ShimmerButton
+                                    shimmerColor="#3B82F6"
+                                    background="transparent"
+                                    className="cursor-not-allowed border-2 border-blue-500/50 text-blue-500 font-semibold opacity-50"
+                                >
+                                    Coming Soon
+                                </ShimmerButton>
+                            </div>
+                        </GlowingShadow>
+                    </motion.div>
+
+                    {/* Card 4: AI Lab */}
                     <motion.div
                         className="md:col-span-2"
                         initial={{ opacity: 0, y: 50 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, delay: 0.4 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
                     >
                         <GlowingShadow glowColor="#7C3AED">
                             <div className="flex h-full flex-col items-center justify-center p-8 text-center">
