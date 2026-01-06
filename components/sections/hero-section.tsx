@@ -91,13 +91,15 @@ export function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1.0 }}
                 >
-                    <ShimmerButton
-                        shimmerColor="#FFFFFF"
-                        background="transparent"
-                        className="border-2 border-purple-500 text-lg font-semibold"
-                    >
-                        View Products
-                    </ShimmerButton>
+                    <a href="/products">
+                        <ShimmerButton
+                            shimmerColor="#FFFFFF"
+                            background="transparent"
+                            className="border-2 border-purple-500 text-lg font-semibold"
+                        >
+                            View Products
+                        </ShimmerButton>
+                    </a>
 
                     <a
                         href="https://promptify.codexai.shop/"

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
@@ -48,9 +49,13 @@ export function Footer() {
                     {/* Brand Column */}
                     <div className="md:col-span-1">
                         <div className="mb-4">
-                            <span className="bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-2xl font-bold text-transparent">
-                                CodexAI
-                            </span>
+                            <Image
+                                src="/favicon.png"
+                                alt="CodexAI Logo"
+                                width={80}
+                                height={80}
+                                className="rounded-xl"
+                            />
                         </div>
                         <p className="mb-6 text-sm text-gray-400">
                             Crafting clean, powerful AI platforms

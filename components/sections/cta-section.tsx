@@ -72,21 +72,25 @@ export function CTASection() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.5 }}
                 >
-                    <ShimmerButton
-                        shimmerColor="#FFFFFF"
-                        background="linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%)"
-                        className="px-12 py-4 text-lg font-bold"
-                    >
-                        Get Started
-                    </ShimmerButton>
+                    <a href="https://rayyan.codexai.shop/" target="_blank" rel="noopener noreferrer">
+                        <ShimmerButton
+                            shimmerColor="#FFFFFF"
+                            background="linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%)"
+                            className="px-12 py-4 text-lg font-bold"
+                        >
+                            Get Started
+                        </ShimmerButton>
+                    </a>
 
-                    <ShimmerButton
-                        shimmerColor="#FFFFFF"
-                        background="transparent"
-                        className="border-2 border-white/20 px-12 py-4 text-lg font-semibold"
-                    >
-                        View Products
-                    </ShimmerButton>
+                    <a href="/products">
+                        <ShimmerButton
+                            shimmerColor="#FFFFFF"
+                            background="transparent"
+                            className="border-2 border-white/20 px-12 py-4 text-lg font-semibold"
+                        >
+                            View Products
+                        </ShimmerButton>
+                    </a>
                 </motion.div>
             </motion.div>
         </section>

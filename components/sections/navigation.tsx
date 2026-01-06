@@ -58,27 +58,38 @@ export function Navigation() {
 
                 {/* Nav Links */}
                 <div className="hidden items-center space-x-8 md:flex">
-                    {["Products", "About", "Vision", "Contact"].map((item, index) => (
-                        <motion.a
-                            key={item}
-                            href={`#${item.toLowerCase()}`}
-                            className="relative text-sm font-medium text-gray-300 transition-colors hover:text-white"
+                    {[
+                        { name: "Products", href: "/products" },
+                        { name: "About", href: "/about" },
+                        { name: "Vision", href: "/vision" },
+                        { name: "Contact", href: "/contact" },
+                    ].map((item, index) => (
+                        <motion.div
+                            key={item.name}
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 + index * 0.1 }}
                         >
-                            {item}
-                            <motion.span
-                                className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-purple-500 to-cyan-500"
-                                whileHover={{ width: "100%" }}
-                                transition={{ duration: 0.3 }}
-                            />
-                        </motion.a>
+                            <Link
+                                href={item.href}
+                                className="relative text-sm font-medium text-gray-300 transition-colors hover:text-white"
+                            >
+                                {item.name}
+                                <motion.span
+                                    className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-purple-500 to-cyan-500"
+                                    whileHover={{ width: "100%" }}
+                                    transition={{ duration: 0.3 }}
+                                />
+                            </Link>
+                        </motion.div>
                     ))}
                 </div>
 
                 {/* CTA Button */}
-                <motion.div
+                <motion.a
+                    href="https://rayyan.codexai.shop/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.6 }}
@@ -88,9 +99,9 @@ export function Navigation() {
                         background="linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%)"
                         className="px-6 py-2 text-sm font-semibold"
                     >
-                        Get Started
+                        Founder
                     </ShimmerButton>
-                </motion.div>
+                </motion.a>
             </motion.div>
 
             {/* Glass border */}

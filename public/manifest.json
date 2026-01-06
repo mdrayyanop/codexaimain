@@ -1,0 +1,17 @@
+{
+  "name": "CodexAI",
+  "short_name": "CodexAI",
+  "description": "CodexAI builds clean, scalable AI products designed to solve real problems and deliver powerful experiences.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#7C3AED",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

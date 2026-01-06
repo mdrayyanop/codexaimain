@@ -22,7 +22,7 @@ export function GlowingShadow({
                 } as CSSProperties
             }
             className={cn(
-                "group relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl",
+                "group relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl h-full",
                 "transition-all duration-500",
                 "hover:scale-[1.02] hover:border-white/20",
                 "before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent",
@@ -38,7 +38,7 @@ export function GlowingShadow({
             />
 
             {/* Content */}
-            <div className="relative z-10">{children}</div>
+            <div className="relative z-10 h-full">{children}</div>
         </div>
     );
 }
