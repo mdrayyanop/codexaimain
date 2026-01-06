@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { Quote } from "lucide-react";
 
 export function FounderSection() {
@@ -28,11 +29,16 @@ export function FounderSection() {
                     >
                         <div className="relative mx-auto aspect-square max-w-sm">
                             {/* Gradient circle */}
-                            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500 via-blue-500 to-cyan-500 p-1">
-                                <div className="flex h-full w-full items-center justify-center rounded-full bg-black">
-                                    <span className="text-8xl font-bold text-transparent bg-gradient-to-br from-purple-400 to-cyan-400 bg-clip-text">
-                                        MR
-                                    </span>
+                            <div className="absolute inset-0 z-10 rounded-full bg-gradient-to-br from-purple-500 via-blue-500 to-cyan-500 p-1">
+                                <div className="relative h-full w-full overflow-hidden rounded-full bg-black">
+                                    <Image
+                                        src="/rayyannew.png"
+                                        alt="Mohammed Rayyan"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        priority
+                                        className="object-cover"
+                                    />
                                 </div>
                             </div>
 
@@ -52,7 +58,7 @@ export function FounderSection() {
 
                             {/* Floating badges */}
                             <motion.div
-                                className="absolute -right-4 top-1/4 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2 backdrop-blur-sm"
+                                className="absolute -right-4 top-1/4 z-20 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2 backdrop-blur-sm"
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 3, repeat: Infinity }}
                             >
@@ -62,7 +68,7 @@ export function FounderSection() {
                             </motion.div>
 
                             <motion.div
-                                className="absolute -left-4 top-1/2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 backdrop-blur-sm"
+                                className="absolute -left-4 top-1/2 z-20 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 backdrop-blur-sm"
                                 animate={{ y: [0, 10, 0] }}
                                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
                             >
@@ -70,7 +76,7 @@ export function FounderSection() {
                             </motion.div>
 
                             <motion.div
-                                className="absolute -right-8 bottom-1/4 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 backdrop-blur-sm"
+                                className="absolute -right-8 bottom-1/4 z-20 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 backdrop-blur-sm"
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 3, repeat: Infinity, delay: 2 }}
                             >
