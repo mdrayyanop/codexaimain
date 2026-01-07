@@ -5,6 +5,8 @@ import { Navigation } from "@/components/sections/navigation";
 import { Footer } from "@/components/sections/footer";
 import { Analytics } from "@vercel/analytics/next";
 
+const baseUrl = "https://www.codexai.shop";
+
 const inter = Inter({ subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -12,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://codexai.shop"),
+  metadataBase: new URL("https://www.codexai.shop"),
   title: {
     default: "CodexAI - Beautiful AI Experiences Built with Precision",
     template: "%s | CodexAI",
@@ -93,7 +95,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://codexai.shop",
+    canonical: baseUrl,
   },
   category: "technology",
 };
@@ -114,8 +116,9 @@ export default function RootLayout({
               "@type": "Organization",
               name: "CodexAI",
               alternateName: "codexai",
-              url: "https://codexai.shop",
+              url: baseUrl,
               logo: "https://codexai.shop/favicon.png",
+              sitemap: `${baseUrl}/sitemap.xml`,
               description:
                 "CodexAI builds clean, scalable AI products designed to solve real problems and deliver powerful experiences.",
               founder: {
