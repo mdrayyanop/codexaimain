@@ -27,5 +27,68 @@ export default function ProductsLayout({
 }: {
     children: React.ReactNode;
 }) {
-    return children;
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                item: {
+                    "@type": "SoftwareApplication",
+                    name: "Promptify",
+                    applicationCategory: "AI Tool",
+                    operatingSystem: "Web",
+                    url: "https://promptify.codexai.shop",
+                    offers: {
+                        "@type": "Offer",
+                        price: "0",
+                        priceCurrency: "USD",
+                    },
+                },
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                item: {
+                    "@type": "SoftwareApplication",
+                    name: "Deenify",
+                    applicationCategory: "EducationalApplication",
+                    operatingSystem: "Web",
+                    url: "https://codexai.shop/products",
+                    offers: {
+                        "@type": "Offer",
+                        price: "0",
+                        priceCurrency: "USD",
+                    },
+                },
+            },
+            {
+                "@type": "ListItem",
+                position: 3,
+                item: {
+                    "@type": "SoftwareApplication",
+                    name: "Edify",
+                    applicationCategory: "EducationalApplication",
+                    operatingSystem: "Web",
+                    url: "https://codexai.shop/products",
+                    offers: {
+                        "@type": "Offer",
+                        price: "0",
+                        priceCurrency: "USD",
+                    },
+                },
+            },
+        ],
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            {children}
+        </>
+    );
 }
