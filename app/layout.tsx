@@ -65,7 +65,7 @@ export const metadata: Metadata = {
       "CodexAI builds clean, scalable AI products designed to solve real problems and deliver powerful experiences. Explore our AI tools like Promptify, Deenify, and Edify.",
     images: [
       {
-        url: "/favicon.png",
+        url: "https://www.codexai.shop/favicon.png",
         width: 512,
         height: 512,
         alt: "CodexAI Logo",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     title: "CodexAI - Beautiful AI Experiences Built with Precision",
     description:
       "CodexAI builds clean, scalable AI products designed to solve real problems and deliver powerful experiences.",
-    images: ["/favicon.png"],
+    images: ["https://www.codexai.shop/favicon.png"],
     creator: "@codexai",
   },
   robots: {
